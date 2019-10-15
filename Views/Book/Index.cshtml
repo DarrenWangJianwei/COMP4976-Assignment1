@@ -1,0 +1,33 @@
+﻿@model Books.Models.jsonToObj
+@{
+    //var booksdata = ViewData.ListBooks as Book;
+}
+<table class="table">
+@foreach (var item in Model.items) {
+        <!-- <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volumeInfo.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volumeInfo.publisher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volumeInfo.publishedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volumeInfo.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volumeInfo.imageLinks.smallThumbnail)
+            </td>
+        </tr> -->
+        <tr>
+            <td>
+                <a asp-action="Detail" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.volumeInfo.title)</a>
+            </td>
+        </tr>
+}
+</table>

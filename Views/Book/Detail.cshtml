@@ -1,0 +1,23 @@
+@model Books.Models.EachItem
+@{
+    //var booksdata = ViewData.ListBooks as Book;
+}
+<table class="table">
+    <tr>
+        <td style="width:150px;">
+            <img src="@Model.imageLinks.smallThumbnail" alt="Small Thumbnail" width="100px" />
+        </td>
+        <td>
+            <p>@Html.DisplayFor(modelItem => Model.title)</p>
+            <p>@Html.DisplayFor(modelItem => Model.authors)</p>
+            <p>@Html.DisplayFor(modelItem => Model.publisher)</p>
+            <p>@Html.DisplayFor(modelItem => Model.publishedDate)</p>
+            <p>@Html.DisplayFor(modelItem => Model.industryIdentifiers)</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            @Html.DisplayFor(modelItem => Model.description)
+        </td>
+    </tr>
+</table>
